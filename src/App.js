@@ -1,25 +1,15 @@
-import React, {useEffect} from "react";
-import { BrowserRouter } from "react-router-dom";
-import NavBar from './components/NavBar'
-import AppRouter from "./components/AppRouter";
-import WebFont from 'webfontloader'
+import React from 'react'
+import Header from './Components/Header';
+import Feature from './Components/Feature';
+import NavBar from './Components/NavBar';
 
 function App() {
-
-  useEffect(() => {
-    WebFont.load({
-      google: {
-        families: ['Dela Gothic One']
-      }
-    });
-  }, []);
-
-
   return (
-    <BrowserRouter>
-      <NavBar />
-      <AppRouter/>
-    </BrowserRouter>
+    <div className="App">
+      <NavBar/>
+      <Header/>
+      <Feature />
+    </div>
   );
 }
 
