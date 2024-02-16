@@ -1,23 +1,24 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { MAIN_ROUTE } from "../utils/consts";
-import '../css/navbar.css'
-import logo from '../assets/svg/logo.png'
+import React from 'react'
+import logo from '../images/logo.png'
 
-const NavBar = () => {
+function NavBar() {
   return (
-    <header>
-      <a className="logo" href="/"><img src={logo} alt="logo" width={150} height={150}/></a>
-        <nav>
-          <ul className="nav__links">
-            <li><NavLink to = {MAIN_ROUTE}>Контакты</NavLink></li>
-            <li><NavLink to = {MAIN_ROUTE}>Тарифы</NavLink></li>
-            <li><NavLink to = {MAIN_ROUTE}>Возможности</NavLink></li>
-            <li className='on_focus'><NavLink to = {MAIN_ROUTE}>Войти</NavLink></li>
-          </ul>
-        </nav>
-    </header>
+    <nav className='nav'>
+      <a href='#' className='logo'>
+          <img src={logo} alt='logo'/>
+      </a>
+      <input type='checkbox' className='menu-btn' id='menu-btn' />
+      <label className='menu-icon' for='menu-btn'>
+        <span className='nav-icon'></span>
+      </label>
+      <ul className='menu'>
+        <li><a href='#'>Возможности</a></li>
+        <li><a href='#'>Тариф</a></li>
+        <li><a href='#'>Контакты</a></li>
+        <li><a href='#'>Войти</a></li>
+      </ul>
+    </nav>
   )
 }
 
-export default NavBar;
+export default NavBar
