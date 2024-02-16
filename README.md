@@ -2,8 +2,6 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-<a href='https://postimg.cc/hJzK499w' target='_blank'><img src='https://i.postimg.cc/wBFMV236/temp-Imagesab9-SQ.avif' border='0' alt='temp-Imagesab9-SQ'/></a>
-
   <h3 align="center">ETD</h3>
 
   <p align="center">
