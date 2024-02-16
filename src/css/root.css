@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Dela Gothic One", sans-serif;
+ }
+ *,
+ *::before,
+ *::after {
+  box-sizing: border-box;
+ }
+ /* ==== CSS VARIABLES ==== */
+ :root {
+  -primary-color: #FEBE42;
+  -text-content: #FFFFFF;
+  -fixed-header-height: 4.5rem;
+ }
+ /* ==== RESET HTML ==== */
+ body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-image: url("../assets/img/background_1.png");
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position: bottom;
+ }
+ ul li {
+  list-style-type: none;
+ }
+ a {
+  text-decoration: none;
+ }
+ button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+ }
