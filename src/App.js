@@ -2,6 +2,8 @@ import React from 'react'
 import Header from './Components/Header';
 import Nav from './Components/Nav';
 import AbilityList from './Components/AbilityList';
+import Contacts from './Components/Contacts';
+import Tarif from './Components/Tarif';
 
 function App() {
   return (
@@ -9,9 +11,8 @@ function App() {
       <Nav/>
       <Header/>
       <AbilityList/>
-      <AbilityList/>
-      <AbilityList/>
-
+      <Tarif/>
+      <Contacts/>
     </div>
   );
 }
