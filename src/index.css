@@ -98,7 +98,7 @@ nav .menu-btn,
   background-image: url("./images/background_1.png");
   background-position: bottom;
   /* padding-top: 10rem; */
-  padding-bottom: 1.1rem;
+  padding-bottom: 1.35rem;
 }
 
 .main {
@@ -172,7 +172,7 @@ nav .menu-btn,
 .arrow-down {
   display: block;
   margin: 0 auto;
-  width: 10px;
+  width: 8px;
   height: 8px;
 }
 
@@ -197,8 +197,8 @@ nav .menu-btn,
   position: absolute;
   top: 0px;
   left: 50%;
-  margin-left: -1px;
-  width: 5.6px;
+  margin-left: 1px;
+  width: 6px;
   height: 15px;
   background: #ffffff;
   content: " ";
@@ -243,7 +243,7 @@ nav .menu-btn,
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(http://localhost:3000/static/media/ability_background.6aefdec2e1ab32794255.png);
+  background-image: url("./images/ability_background.png");
   background-color: #FFFFFF;
   background-position: bottom;
 }
@@ -277,6 +277,125 @@ nav .menu-btn,
   background-repeat: no-repeat;
   height: 250px;
   width: 1030px;
+}
+
+.tarifs {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FEBE42;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.hover-text-one figure {
+  z-index: 1;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  margin-inline: 0;
+  margin-block: 0;
+}
+
+.hover-text-one figure .photo {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  opacity: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hover-text-one figure .beginner {
+  background-image: url("./images/beginner+.jpg");
+}
+
+.hover-text-one figure .advance {
+  background-image: url("./images/advance+.jpg");
+}
+
+.hover-text-one figure .premium {
+  background-image: url("./images/premium+.jpg");
+}
+
+.hover-text-one figure figcaption {
+  padding: 2em;
+  color: #fff;
+  font-size: 1.25em;
+  backface-visibility: hidden;
+}
+
+.hover-text-one figure figcaption::before,
+.hover-text-one figure figcaption::after {
+  pointer-events: none;
+}
+
+.hover-text-one figure figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hover-text-one figure h1 {
+  word-spacing: -0.15em;
+}
+
+.hover-text-one figure h2,
+.hover-text-one figure p {
+  padding: 0.5rem;
+}
+
+.hover-text-one figure p {
+  text-shadow: black 0.1em 0.2em 0.2em;
+  letter-spacing: 1px;
+  font-size: 24px;
+}
+
+figure.effect-text-two h1 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  color: #FFFFFF !important;
+  font-size: 48px;
+  color: white;
+  text-shadow: black 0.1em 0.2em 0.2em;
+  transition: transform 0.35s, color 0.35s;
+  transform: translate3d(0, -50%, 0);
+}
+
+figure.effect-text-two figcaption::before,
+figure.effect-text-two p {
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-text-two p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2em;
+  width: 100%;
+  opacity: 0;
+  transform: translate3d(0, 10px, 0);
+}
+
+figure.effect-text-two:hover h1 {
+  color: #fff;
+  transform: translate3d(0, -50%, 0) translate3d(0, -140px, 0);
+}
+
+figure.effect-text-two:hover figcaption::before,
+figure.effect-text-two:hover p {
+  opacity: 1;
+  transform: translate3d(0, -15rem, 0);
+}
+
+figure.effect-text-two:hover .photo {
+  filter: blur(5px);
 }
 
 .card {
@@ -372,4 +491,33 @@ nav .menu-btn,
 }
 .card.a100:hover .card__content-inner {
   height: 80px;
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./images/contacts_bg.png");
+  background-position: bottom;
+}
+
+.contacts {
+  color: #FFFFFF;
+}
+
+.contacts_img {
+  transform: translateY(98%);
+}
+
+.hover-text-one {
+  position: relative;
+  display: block;
+  width: 100vw;
+  height: 100vh;
 }/*# sourceMappingURL=index.css.map */
