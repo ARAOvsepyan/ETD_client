@@ -3,7 +3,7 @@ import { Parallax } from 'react-scroll-parallax'
 
 const AbilityList = () => {
   return (
-    <div className='ability'>
+    <div className='ability' id='ability'>
       <h1>НАШИ ВОЗМОЖНОСТИ</h1>
       <div className='ability_cards'>
       <Parallax speed={-10}>
