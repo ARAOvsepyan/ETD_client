@@ -5,31 +5,31 @@ const AbilityList = () => {
   return (
     <div className='ability' id='ability'>
       <h1>НАШИ ВОЗМОЖНОСТИ</h1>
-      <div className='ability_cards'>
+      <div className='ability__cards'>
       <Parallax speed={-10}>
-      <div class="card calendar">
-        <div class="card__content">
-          <div class="card__content-inner">
-            <div class="card__title">Календарь</div>
-            <div class="card__description">Lorem ipsum doler amet...</div>
+      <div class="ability__card calendar">
+        <div class="ability__card__content">
+          <div class="ability__card__content-inner">
+            <div class="ability__card__title">Календарь</div>
+            <div class="ability__card__description">Lorem ipsum doler amet...</div>
           </div>
         </div>
       </div>
-      <div class="card task">
-        <div class="card__content">
-          <div class="card__content-inner">
-            <div class="card__title">Задачник</div>
-            <div class="card__description">Lorem ipsum doler amet...</div>
+      <div class="ability__card task">
+        <div class="ability__card__content">
+          <div class="ability__card__content-inner">
+            <div class="ability__card__title">Задачник</div>
+            <div class="ability__card__description">Lorem ipsum doler amet...</div>
           </div>
         </div>
       </div>
       </Parallax>
-      <Parallax speed={5}>
-      <div class="card data">
-        <div class="card__content">
-          <div class="card__content-inner">
-            <div class="card__title">База учеников</div>
-            <div class="card__description">Lorem ipsum doler amet...</div>
+      <Parallax speed={4}>
+      <div class="ability__card data">
+        <div class="ability__card__content">
+          <div class="ability__card__content-inner">
+            <div class="ability__card__title">База учеников</div>
+            <div class="ability__card__description">Lorem ipsum doler amet...</div>
           </div>
         </div>
       </div>
