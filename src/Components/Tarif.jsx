@@ -1,9 +1,8 @@
 import React from 'react'
-import { Parallax } from 'react-scroll-parallax'
 
 const Tarif = () => {
   return (
-    <div className="tarifs">
+    <div className="tarifs" id='tarifs'>
       <div className="hover-text-one">
         <figure className="effect-text-two">
            <div className='photo beginner'/>
