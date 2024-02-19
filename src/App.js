@@ -4,8 +4,10 @@ import Nav from './Components/Nav';
 import AbilityList from './Components/AbilityList';
 import Contacts from './Components/Contacts';
 import Tarif from './Components/Tarif';
+import ScrollToTop from 'react-scroll-to-top';
 
 function App() {
+  
   return (
     <div className="App">
       <Nav/>
@@ -13,6 +15,7 @@ function App() {
       <AbilityList/>
       <Tarif/>
       <Contacts/>
+      <ScrollToTop smooth component={<div></div>}/>
     </div>
   );
 }
