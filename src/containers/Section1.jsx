@@ -116,6 +116,7 @@ const Section1 = () => {
             marginTop="4rem"
           >
             <LaunchButton
+              name={"Попробовать"}
               fullWidth={isSmallScreen}
               sx={{ height: 58, px: 3 }}
               onClick={handleClickOpen}

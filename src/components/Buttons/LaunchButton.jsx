@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
-const LaunchButton = ({ sx = {}, onClick, ...props }) => {
+const LaunchButton = ({ sx = {}, onClick, name, ...props }) => {
   return (
     <Button
       variant="contained"
@@ -9,7 +9,7 @@ const LaunchButton = ({ sx = {}, onClick, ...props }) => {
       {...props}
       onClick={onClick}
     >
-      Попробовать
+      {name}
       <KeyboardArrowRightIcon />
     </Button>
   );

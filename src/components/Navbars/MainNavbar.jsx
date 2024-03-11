@@ -185,6 +185,7 @@ const Navbar = () => {
               <LaunchButton
                 sx={{ borderRadius: 3 }}
                 onClick={handleClickOpen}
+                name={"Войти"}
               />
             </Stack>
           )}
