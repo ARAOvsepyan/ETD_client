@@ -23,11 +23,16 @@ import Sec4Image1 from "../assets/images/section4/Basic.svg";
 import Sec4Image2 from "../assets/images/section4/Advance.svg";
 import Sec4Image3 from "../assets/images/section4/Premium.svg";
 
+// Section 5
+import Sec5BG from "../assets/images/section5/bg.png";
+import Sec5LayerBG from "../assets/images/section5/layer-bg.png";
+import Sec5SupportImg from "../assets/images/section5/support.png";
+import Sec5ImgTestimonials from "../assets/images/section5/testimonials.png";
+
 // Footer
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import ChatIcon from "@mui/icons-material/Chat";
 import TelegramIcon from "@mui/icons-material/Telegram";
-import VK from "../components/SvgIcon/VK.jsx";
 
 //Auth
 import AuthBG from "../assets/images/auth/bg.png";
@@ -152,6 +157,45 @@ export const footerContent = {
     left: "© 2023 TUTOR, Все права защищены.",
   },
 };
+
+export const section5Content = {
+  Sec5BG,
+  Sec5LayerBG,
+  Sec5SupportImg,
+  Sec5ImgTestimonials,
+  title: "Мы предлагаем премиум-поддержку и Эффективные решения",
+  
+};
+
+export const section6Content = {
+  count: 4,
+  rows: [
+    {
+      id: 1,
+      title: 'Как начать работу на платформе',
+      subtitle: 'Рассказываем, как начать работу, какие есть возможности и как их по-максимуму использовать при обучении детей.',
+      tag: ['Репетиторам', 'Быстрый старт']
+    },
+    {
+      id: 2,
+      title: 'Как пригласить учеников',
+      subtitle: 'Чтобы собирать статистику по группе и делать массовые рассылки с домашними работами для учеников, добавьте их в группу.',
+      tag: ['Репетиторам', 'Быстрый старт']
+    },
+    {
+      id: 3,
+      title: 'Как добавить критерии ЕГЭ/ОГЭ',
+      subtitle: 'Одна из фишек платформы - возможность подгрузить готовые критерии, чтобы удобно проверять и комментировать заданий второй части в ЕГЭ и ОГЭ.',
+      tag: ['Репетиторам', 'Задания', 'Оценка']
+    },
+    {
+      id: 4,
+      title: 'Как подключить уведомления в Telegram',
+      subtitle: 'Воспользуйтесь этой инструкцией, чтобы удобно получать уведомления себе на телефон, в мессенджеры.',
+      tag: ['Репетиторам', 'Уведомление']
+    },
+  ]
+}
 
 export const navbarContent = {
   Logo,

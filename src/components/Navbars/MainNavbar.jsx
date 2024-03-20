@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { Link } from "react-scroll";
 import useScrollPosition from "../../hooks/useScrollPosition";
 
+import LinkButton from "../Buttons/LinkButton";
+
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LanguageIcon from "@mui/icons-material/Language";
 import LightModeIcon from "@mui/icons-material/LightMode";
@@ -26,26 +28,7 @@ import Auth from "../Modals/Auth";
 
 const { Logo } = navbarContent;
 
-const LinkButton = ({ children, ...props }) => (
-  <Stack
-    direction="row"
-    alignItems="center"
-    spacing={0.2}
-    sx={{
-      cursor: "pointer",
-      color: "secondary",
-      transition: "all 200ms linear",
-      background:
-        "linear-gradient(currentColor 0 0) bottom /var(--d, 0) 3px no-repeat",
-      ":hover": { "--d": "100%" },
-    }}
-    {...props}
-  >
-    {children}
-  </Stack>
-);
-
-const Navbar = () => {
+const MainNavbar = () => {
   const theme = useTheme();
   const colorMode = useContext(ColorModeContext);
 
@@ -202,4 +185,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default MainNavbar;

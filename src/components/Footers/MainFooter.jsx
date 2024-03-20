@@ -39,7 +39,6 @@ const LinkSection = ({ title, links }) => (
 
 const Footer = () => {
   const theme = useTheme();
-  console.log(theme.palette.secondary);
   return (
     <Box id="contacts">
       <Divider sx={{ mb: 10 }} />

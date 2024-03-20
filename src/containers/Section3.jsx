@@ -58,7 +58,7 @@ const Section3 = () => {
               {TABS[tabValue].subtitle}
             </Typography>
 
-            <OutlinedButton arrow fit endPoint='ability'>
+            <OutlinedButton arrow fit endPoint='help'>
               Подробнее
             </OutlinedButton>
           </Stack>

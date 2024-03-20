@@ -22,9 +22,9 @@ const Section4 = () => {
         </Stack>
 
         <Stack justifyContent="space-between" flexDirection="row" gap={3}>
-          <ServiceCard color='secondary' {...TABS[0]} />
-          <ServiceCard color='secondary' {...TABS[1]} />
-          <ServiceCard color='secondary' {...TABS[2]} />
+          <ServiceCard color='secondary' {...TABS[0]} endPoint='help'/>
+          <ServiceCard color='secondary' {...TABS[1]} endPoint='help'/>
+          <ServiceCard color='secondary' {...TABS[2]} endPoint='help'/>
         </Stack>
       </Stack>
       {/* <Grid

@@ -1,10 +1,8 @@
 import { ThemeProvider } from "@mui/material";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Ability from "./pages/Ability";
+import Help from "./pages/Help";
 import Home from "./pages/Home";
-import Swap from "./pages/Swap";
-import Tarifs from "./pages/Tarifs";
 import { ColorModeContext, useMode } from "./theme";
 
 const App = () => {
@@ -16,9 +14,7 @@ const App = () => {
         {/* <div> */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/swap" element={<Swap />} />
-          <Route path="/tarifs" element={<Tarifs />} />
-          <Route path="/ability" element={<Ability />} />
+          <Route path="/help" element={<Help />} />
           <Route path="*" element={<Home />} />
         </Routes>
         {/* </div> */}
