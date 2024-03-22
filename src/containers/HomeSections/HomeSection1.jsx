@@ -10,12 +10,12 @@ import {
   useTheme,
 } from "@mui/material";
 import { useState } from "react";
-import LaunchButton from "../components/Buttons/LaunchButton";
-import Auth from "../components/Modals/Auth";
-import Title from "../components/Title";
-import { section1Content } from "../utils/content";
+import LaunchButton from "../../components/Buttons/LaunchButton";
+import Auth from "../../components/Modals/Auth";
+import Title from "../../components/Title";
+import { HomeSection1Content } from "../../utils/content";
 
-const { Laoptop, BG, Line, title, ShootingStarImage } = section1Content;
+const { Laoptop, BG, Line, title, ShootingStarImage } = HomeSection1Content;
 
 const CustomButton = ({ children, ...props }) => (
   <Button
@@ -33,7 +33,7 @@ const CustomButton = ({ children, ...props }) => (
   </Button>
 );
 
-const Section1 = () => {
+const HomeSection1 = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -160,4 +160,4 @@ const Section1 = () => {
   );
 };
 
-export default Section1;
+export default HomeSection1;

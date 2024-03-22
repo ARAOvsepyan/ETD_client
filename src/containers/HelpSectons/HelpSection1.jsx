@@ -3,19 +3,16 @@ import {
   TextField,
   Container,
   Stack,
-  Typography,
   useTheme,
   IconButton,
 } from "@mui/material";
 import { useState } from "react";
-import Auth from "../components/Modals/Auth";
-import Title from "../components/Title";
-import { section5Content } from "../utils/content";
+import Auth from "../../components/Modals/Auth";
+import Title from "../../components/Title";
+import { HelpSection1Content } from "../../utils/content";
 import SearchIcon from "@mui/icons-material/Search";
-import HelpCard from "../components/Cards/HelpCard";
 
-const { Sec5BG, Sec5LayerBG, Sec5SupportImg, Sec5ImgTestimonials, title } =
-  section5Content;
+const { Sec5BG, Sec5SupportImg, title } = HelpSection1Content;
 
 const SearchBar = () => (
   <form>
@@ -30,13 +27,13 @@ const SearchBar = () => (
       size="small"
       width="80%"
     />
-    <IconButton aria-label="search">
-      <SearchIcon color="secondary" sx={{ ml: 2 }} />
+    <IconButton aria-label="search" sx={{ ml: 2 }}>
+      <SearchIcon color="secondary" />
     </IconButton>
   </form>
 );
 
-const Section5 = () => {
+const HelpSection1 = () => {
   const theme = useTheme();
 
   const [open, setOpen] = useState(false);
@@ -50,7 +47,7 @@ const Section5 = () => {
   };
 
   return (
-    <Box sx={{ width: "100%", height: '80%'}}>
+    <Box sx={{ width: "100%", height: "80%" }}>
       <Box>
         <img
           src={Sec5BG}
@@ -107,4 +104,4 @@ const Section5 = () => {
   );
 };
 
-export default Section5;
+export default HelpSection1;

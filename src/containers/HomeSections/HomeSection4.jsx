@@ -1,13 +1,11 @@
-import { Container, Grid, Stack, Tab, Tabs, Typography } from "@mui/material";
-import React, { useState } from "react";
-import OutlinedButton from "../components/Buttons/OutlinedButton";
-import Title from "../components/Title";
-import { section4Content } from "../utils/content";
-import ServiceCard from "../components/Cards/ServiceCard";
+import { Container, Stack, Typography } from "@mui/material";
+import Title from "../../components/Title";
+import { section4Content } from "../../utils/content";
+import ServiceCard from "../../components/Cards/ServiceCard";
 
 const { title, subtitle, TABS } = section4Content;
 
-const Section4 = () => {
+const HomeSection4 = () => {
   return (
     <Container
       id="tarifs"
@@ -22,9 +20,9 @@ const Section4 = () => {
         </Stack>
 
         <Stack justifyContent="space-between" flexDirection="row" gap={3}>
-          <ServiceCard color='secondary' {...TABS[0]} endPoint='help'/>
-          <ServiceCard color='secondary' {...TABS[1]} endPoint='help'/>
-          <ServiceCard color='secondary' {...TABS[2]} endPoint='help'/>
+          <ServiceCard color="secondary" {...TABS[0]}/>
+          <ServiceCard color="secondary" {...TABS[1]}/>
+          <ServiceCard color="secondary" {...TABS[2]}/>
         </Stack>
       </Stack>
       {/* <Grid
@@ -82,4 +80,4 @@ const Section4 = () => {
   );
 };
 
-export default Section4;
+export default HomeSection4;

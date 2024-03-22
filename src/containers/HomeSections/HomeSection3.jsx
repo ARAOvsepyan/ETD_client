@@ -1,17 +1,16 @@
 import { Container, Grid, Stack, Tab, Tabs, Typography } from "@mui/material";
 import React, { useState } from "react";
-import OutlinedButton from "../components/Buttons/OutlinedButton";
-import Title from "../components/Title";
-import { section3Content } from "../utils/content";
+import OutlinedButton from "../../components/Buttons/OutlinedButton";
+import Title from "../../components/Title";
+import { section3Content } from "../../utils/content";
 
 const { title, TABS } = section3Content;
 
-const Section3 = () => {
+const HomeSection3 = () => {
   const [tabValue, setTabValue] = useState(0);
 
   return (
     <Container sx={{ mt: { xs: 15, md: 20, lg: 25 } }}>
-
       <Grid
         container
         spacing={10}
@@ -58,7 +57,7 @@ const Section3 = () => {
               {TABS[tabValue].subtitle}
             </Typography>
 
-            <OutlinedButton arrow fit endPoint='help'>
+            <OutlinedButton arrow fit endPoint="help">
               Подробнее
             </OutlinedButton>
           </Stack>
@@ -68,4 +67,4 @@ const Section3 = () => {
   );
 };
 
-export default Section3;
+export default HomeSection3;

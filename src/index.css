@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Montserrat:wght@100..900&display=swap");
 
+.content {
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .app {
+    display: flex;
+    position: relative;
+  }
+
 .card {
     width: 120px;
     height: 120px;

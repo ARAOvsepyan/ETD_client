@@ -1,37 +1,31 @@
-import { Box, Stack, Typography, Divider, Avatar } from "@mui/material";
+import { Box, Divider, Stack, Typography, useTheme } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import React from "react";
 import Title from "../Title";
-import { useNavigate } from "react-router-dom";
-
-import { useTheme } from "@mui/material";
 
 const HelpCard = ({ id, title, subtitle, tag }) => {
   const theme = useTheme();
-  // const navigate = useNavigate();
-
-  // const handleClick = () => {
-  //   navigate(`/${id}`);
-  // };
-
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/help/${id}`);
+  };
   return (
     <Box
-      // onClick={handleClick}
+      onClick={handleClick}
       sx={{
-        display: "flex",
         gap: 2,
-        alignItems: "center",
-        flexDirection: "column",
         padding: "3rem",
         borderRadius: "5px",
         position: "relative",
         border: "1px solid rgba(128, 128, 128, 0.12)",
-        backgroundClip: "padding-box",
         textAlign: "center",
-        backdropFilter: "blur(50%)",
         transition: "all 0.3s",
         cursor: "pointer",
         height: "100%",
-        width: "70%",
+        width: "40%",
+        minWidth: "500px",
+        background: theme.palette.gradient.main,
+        boxShadow: "0 7px 20px 5px #00000088",
         ":hover": {
           transform: "scale(1.02)",
           boxShadow: "0px 0px 30px #ff8c1a",
@@ -52,9 +46,11 @@ const HelpCard = ({ id, title, subtitle, tag }) => {
             {subtitle}
           </Typography>
         </Stack>
-        <Stack direction="row" justifyContent="end" width="100%" gap={2}>
+        <Stack direction="row" justifyContent="end" width="100%" gap={2} mt={5}>
           {tag.map((item) => (
-            <Typography>{item}</Typography>
+            <Typography variant="body2" color="secondary">
+              #{item}
+            </Typography>
           ))}
         </Stack>
       </Stack>

@@ -1,21 +1,14 @@
 import { Box, Stack, Typography, Divider, Avatar } from "@mui/material";
 import React from "react";
 import Title from "../Title";
-import { useNavigate } from "react-router-dom";
 
 import { useTheme } from "@mui/material";
 
-const ServiceCard = ({  title, subtitle, image, price, endPoint }) => {
+const ServiceCard = ({  title, subtitle, image, price }) => {
   const theme = useTheme();
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate(`/${endPoint}`);
-  };
 
   return (
     <Box
-      onClick={handleClick}
       sx={{
         display: "flex",
         gap: 2,

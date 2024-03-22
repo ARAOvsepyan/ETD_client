@@ -1,8 +1,8 @@
 import { useState, useRef, useMemo, useEffect } from "react";
-import { Container, useTheme } from "@mui/material";
+import { Container } from "@mui/material";
 import React from "react";
-import Title from "../components/Title";
-import { section2Content } from "../utils/content";
+import Title from "../../components/Title";
+import { section2Content } from "../../utils/content";
 
 const { title, Excel, Word, GoogleDrive, GoogleForms, Tutor, Plus, Even } =
   section2Content;
@@ -16,7 +16,7 @@ function useIsInViewport(ref) {
       new IntersectionObserver(([entry]) => {
         setIsIntersecting(entry.isIntersecting);
       }),
-    []
+    [],
   );
 
   useEffect(() => {
@@ -32,7 +32,7 @@ function useIsInViewport(ref) {
   return { isIntersecting, count };
 }
 
-const Section2 = () => {
+const HomeSection2 = () => {
   const [entering, setEntering] = useState(false);
 
   const ref = useRef(null);
@@ -65,8 +65,7 @@ const Section2 = () => {
           className={entering ? `card Excel Excel__entering` : `card Excel`}
         />
         <Plus
-                  color="secondary"
-
+          color="secondary"
           className={entering ? `card plus first__entering` : `card plus`}
         />
         <img
@@ -106,4 +105,4 @@ const Section2 = () => {
   );
 };
 
-export default Section2;
+export default HomeSection2;

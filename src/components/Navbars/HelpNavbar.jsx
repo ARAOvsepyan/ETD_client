@@ -10,6 +10,7 @@ import {
   IconButton,
   Button,
   Stack,
+  Breadcrumbs,
   useTheme,
   useMediaQuery,
 } from "@mui/material";
@@ -20,13 +21,12 @@ import { NAVBAR_HEIGHT } from "../../constants";
 import { navbarContent } from "../../utils/content";
 import LaunchButton from "../Buttons/LaunchButton";
 import Auth from "../Modals/Auth";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import Title from "../Title";
 
 const { Logo } = navbarContent;
 
-
-const Navbar = () => {
+const Navbar = ({ title }) => {
   const theme = useTheme();
   const colorMode = useContext(ColorModeContext);
 
@@ -39,6 +39,15 @@ const Navbar = () => {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const { pathname } = useLocation();
+  const data = pathname.split("/");
+
+  data.shift();
+  if (title) {
+    data.pop();
+    data.push(title.split(" ").slice(0, 2).join(" ") + "...");
+  }
 
   const scrollPosition = useScrollPosition();
 
@@ -67,41 +76,64 @@ const Navbar = () => {
           justifyContent="space-between"
           flexWrap="wrap"
         >
-          <Link
-            to="/home"
-          >
+          <Link to="/home">
             <img src={Logo} style={{ height: "5rem", objectFit: "contain" }} />
           </Link>
 
-          <Title
-            variant={{ xs: "h4", sm: "h3", md: "h2" }}
-            sx={{
-              letterSpacing: "0.02em",
-              textTransform: "uppercase",
-              marginLeft: '10rem'
-            }}
-          >
-            База зананий
-          </Title>
+          <Breadcrumbs aria-label="breadcrumb" sx={{ textDecoration: "none" }}>
+            <Link
+              style={{ textDecoration: "none" }}
+              // color="inherit"
+              to="/"
+            >
+              <Title
+                variant={{ xs: "body1", sm: "h6", md: "h5" }}
+                sx={{
+                  letterSpacing: "0.02em",
+                  textTransform: "uppercase",
+                  // marginLeft: "10rem",
+                }}
+              >
+                TUTOR
+              </Title>
+            </Link>
+            {data.map((item) => (
+              <Link
+                style={{ textDecoration: "none" }}
+                // color="inherit"
+                to={`/${item}`}
+              >
+                <Title
+                  variant={{ xs: "body1", sm: "h6", md: "h5" }}
+                  sx={{
+                    letterSpacing: "0.02em",
+                    textTransform: "uppercase",
+                    // marginLeft: "10rem",
+                  }}
+                >
+                  {item === "help" ? "База знаний" : item}
+                </Title>
+              </Link>
+            ))}
+          </Breadcrumbs>
 
-
-            <Stack direction="row" spacing={1} alignItems="center">
-              <Button color="secondary" startIcon={<LanguageIcon />}>
-                RU
-              </Button>
-              <IconButton onClick={colorMode.toggleColorMode}>
-                {theme.palette.mode === "dark" ? (
-                  <DarkModeIcon />
-                ) : (
-                  <LightModeIcon color="secondary" />
-                )}
-              </IconButton>
-              <LaunchButton
-                sx={{ borderRadius: 3 }}
-                onClick={handleClickOpen}
-                name={"Войти"}
-              />
-            </Stack>
+          <Stack direction="row" spacing={1} alignItems="center">
+            <Button color="secondary" startIcon={<LanguageIcon />}>
+              RU
+            </Button>
+            <IconButton onClick={colorMode.toggleColorMode}>
+              {theme.palette.mode === "dark" ? (
+                <DarkModeIcon />
+              ) : (
+                <LightModeIcon color="secondary" />
+              )}
+            </IconButton>
+            <LaunchButton
+              sx={{ borderRadius: 3 }}
+              onClick={handleClickOpen}
+              name={"Войти"}
+            />
+          </Stack>
         </Stack>
       </Container>
       <Auth

@@ -8,42 +8,47 @@ export const themeSettings = (mode) => {
       mode: mode,
       ...(mode === "light"
         ? {
-            // palette values for dark mode
             primary: {
-              main: '#e67300',
+              main: "#e67300",
             },
             secondary: {
-              main: '#000000',
+              main: "#000000",
             },
             accent: {
-              main: '#020024',
+              main: "#020024",
             },
             background: {
-              main: '#ffffff',
-              default: '#f5f6f9',
+              main: "#ffffff",
+              default: "#f5f6f9",
             },
             text: {
-              main: '#000000'
-            }
+              main: "#000000",
+            },
+            gradient: {
+              main: "repeating-linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.4))",
+            },
           }
         : {
             // palette values for light mode
             primary: {
-              main: '#ff8c1a',
+              main: "#ff8c1a",
             },
             secondary: {
-              main: '#ffffff',
+              main: "#ffffff",
             },
             accent: {
-              main: '#dddbff',
+              main: "#dddbff",
             },
             background: {
-              main: '#000000',
-              default: '#141F2D',
+              main: "#000000",
+              default: "#141F2D",
             },
             text: {
-              main: '#ffffff'
-            }
+              main: "#ffffff",
+            },
+            gradient: {
+              main: "repeating-linear-gradient(rgba(20, 31, 45, 1), rgba(20, 31, 44, 0.4))",
+            },
           }),
     },
     typography: {
@@ -106,7 +111,7 @@ export const themeSettings = (mode) => {
       button: {
         textTransform: "none",
       },
-    }
+    },
   };
 };
 
@@ -123,7 +128,7 @@ export const useMode = () => {
       toggleColorMode: () =>
         setMode((prev) => (prev === "light" ? "dark" : "light")),
     }),
-    []
+    [],
   );
 
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);

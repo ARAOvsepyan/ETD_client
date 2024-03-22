@@ -1,5 +1,5 @@
 {
-  "name": "1inch-clone",
+  "name": "tutor",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -13,9 +13,12 @@
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.10",
+    "ag-grid-enterprise": "^31.2.0",
+    "ag-grid-react": "^31.2.0",
     "react": "^18.2.0",
     "react-countup": "^6.4.1",
     "react-dom": "^18.2.0",
+    "react-pro-sidebar": "^0.7.1",
     "react-router-dom": "^6.8.1",
     "react-scroll": "^1.9.0",
     "react-use-measure": "^2.1.1"
@@ -24,6 +27,6 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
-    "vite": "^4.1.0"
+    "vite": "^4.5.2"
   }
 }

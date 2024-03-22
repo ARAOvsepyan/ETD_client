@@ -7,7 +7,6 @@ const OutlinedButton = ({ sx = {}, endPoint, arrow, children, fit, ...props }) =
   const navigate = useNavigate();
 
   const handleClick = () => {
-    console.log(endPoint);
     navigate(`/${endPoint}`);
   };
 

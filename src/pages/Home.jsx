@@ -2,20 +2,20 @@ import { Box } from "@mui/material";
 import React from "react";
 import Footer from "../components/Footers/MainFooter";
 import MainNavbar from "../components/Navbars/MainNavbar";
-import Section1 from "../containers/Section1";
-import Section3 from "../containers/Section3";
-import Section4 from "../containers/Section4";
-import Section2 from "../containers/Section2";
+import HomeSection1 from "../containers/HomeSections/HomeSection1";
+import HomeSection3 from "../containers/HomeSections/HomeSection3";
+import HomeSection4 from "../containers/HomeSections/HomeSection4";
+import HomeSection2 from "../containers/HomeSections/HomeSection2";
 
 const Home = () => {
   return (
     <div>
       <MainNavbar />
-      <Section1 />
+      <HomeSection1 />
       <Box sx={{ bgcolor: "background.main", position: "relative" }}>
-        <Section2 />
-        <Section3 />
-        <Section4 />
+        <HomeSection2 />
+        <HomeSection3 />
+        <HomeSection4 />
         <Footer />
       </Box>
     </div>
